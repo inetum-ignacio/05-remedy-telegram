@@ -123,7 +123,7 @@ class ExtractData:
         rollback_final = filter_telegram(filter_hora_programada_final, 'Inicio Rollback')
         resp_otecel_final = filter_telegram(filter_hora_programada_final, 'Resp Otecel*')
 
-        if len(id_cambio_inicio) > 0:
+        if len(id_cambio_final) > 0:
             ChatTelegram(
                 f'🔴 Fin de actividad:\n{id_cambio_final},\n'
                 f'🔴 con Estado:\n{estado_final},\n'
@@ -144,7 +144,7 @@ class ExtractData:
         rollback_rollback = filter_telegram(filter_hora_rollback, 'Inicio Rollback')
         resp_otecel_rollback = filter_telegram(filter_hora_rollback, 'Resp Otecel*')
 
-        if len(id_cambio_inicio) > 0:
+        if len(id_cambio_rollback) > 0:
             ChatTelegram(
                 f'🔴 Validacion Rollback de actividad:\n{id_cambio_rollback},\n'
                 f'🔴 Estado:\n{estado_rollback},\n'
