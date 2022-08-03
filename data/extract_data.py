@@ -13,7 +13,10 @@ def path_temp():
 
 
 def separar_fecha(frame_matriz_filter, column, format):
-    return pd.to_datetime(frame_matriz_filter[f'{column}'], format='%d/%m/%Y %H:%M').dt.strftime(f'{format}')
+    try:
+        return pd.to_datetime(frame_matriz_filter[f'{column}'], format='%d/%m/%Y %H:%M:%S').dt.strftime(f'{format}')
+    except:
+        print('Error en la funcion seperar_fecha')
 
 
 def filter_telegram(filter_frame, name_column):
@@ -157,9 +160,9 @@ class ExtractData:
         # print(frame_add_colum)
         return filter_hora_programada, filter_hora_programada_final, filter_hora_rollback
 
-
+# test
 # path = ExtractData(path_temp())
-# path.data_matriz('11:35')
+# path.data_matriz('03:00', '03/08/2022')
 
-if __name__ == '__main__':
-    ExtractData()
+# if __name__ == '__main__':
+#     ExtractData()
