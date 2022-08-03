@@ -161,8 +161,8 @@ class ExtractData:
         return filter_hora_programada, filter_hora_programada_final, filter_hora_rollback
 
 # test
-path = ExtractData(path_temp())
-path.data_matriz('03:00', '03/08/2022')
+# path = ExtractData(path_temp())
+# path.data_matriz('03:00', '03/08/2022')
 
 # if __name__ == '__main__':
 #     ExtractData()
