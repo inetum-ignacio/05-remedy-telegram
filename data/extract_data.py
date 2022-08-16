@@ -14,7 +14,7 @@ def path_temp():
 
 def separar_fecha(frame_matriz_filter, column, format):
     try:
-        return pd.to_datetime(frame_matriz_filter[f'{column}'], format='%d/%m/%Y %H:%M:%S').dt.strftime(f'{format}')
+        return pd.to_datetime(frame_matriz_filter[f'{column}'], format='%d/%m/%Y %H:%M').dt.strftime(f'{format}')
     except:
         print('Error en la funcion seperar_fecha')
 

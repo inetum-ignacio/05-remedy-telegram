@@ -8,7 +8,7 @@ from data.extract_data import ExtractData
 
 
 def path_temp():
-    absolutepath = os.path.abspath(__file__)
+    absolutepath = os.path.abspath(__name__)
     fileDirectory = os.path.dirname(absolutepath)
     parentDirectory = os.path.dirname(fileDirectory)
     file = os.path.join(parentDirectory, 'data', 'temp_file', 'Report.csv')
