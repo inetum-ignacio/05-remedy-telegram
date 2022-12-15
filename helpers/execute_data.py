@@ -8,7 +8,7 @@ from data.extract_data import ExtractData
 
 
 def path_temp():
-    absolutepath = os.path.abspath(__name__)
+    absolutepath = os.path.abspath(__file__)
     fileDirectory = os.path.dirname(absolutepath)
     parentDirectory = os.path.dirname(fileDirectory)
     file = os.path.join(parentDirectory, 'data', 'temp_file', 'Report.csv')
@@ -16,7 +16,7 @@ def path_temp():
 
 
 def path_temp_absolute():
-    path_ruta = "C:\\Users\\Inetum-1421\\Documents\\GitHubWork\\05-remedy-telegram\\data\\temp_file\\Report.csv"
+    path_ruta = "C:\\Users\\Inetum-1421\\Documents\\GithuhWorkbeta\\05-remedy-telegram\\data\\temp_file\\Report.csv"
     return io.open(path_ruta, encoding='latin-1')
 
 
